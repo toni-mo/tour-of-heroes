@@ -1,0 +1,46 @@
+<div class="col-md-4 block">
+<button mat-fab>Click me!</button>
+<button-overview-example></button-overview-example>
+	<h2>My Heroes</h2>
+	<h3>heroes component</h3>
+	<mat-card *ngFor="let hero of heroes" [class.selected]="hero===selectedHero" (click)="onSelect(hero)">
+
+		<!-- <mat-card-header>
+			<mat-icon mat-card-avatar color="primary" class="md-36">account_circle</mat-icon>
+			<mat-card-title>{{hero.name}}</mat-card-title>
+		</mat-card-header> -->
+		<!-- <mat-card-title>{{hero.name}}</mat-card-title> -->
+		<mat-icon color="primary">account_circle</mat-icon>
+		<!-- <i class="material-icons">account_circle</i> -->
+		<!-- <h3 class="card-title">{{hero.name}}</h3> -->
+		<span>{{hero.name}}</span>
+		<div class="line"></div>
+		<div class="line-reverse"></div>
+	</mat-card>
+	<mat-list >
+		<mat-list-item *ngFor="let hero of heroes" [class.selected]="hero===selectedHero" (click)="onSelect(hero)">
+		<mat-icon matListIcon color="primary" class="material-icons md-36">account_circle</mat-icon>
+			<h3 matline>{{hero.name}}</h3>
+			<h3>{{hero.id}}</h3>
+		</mat-list-item>
+	</mat-list>
+	<ul class="heroes list-unstyled">
+		<li *ngFor="let hero of heroes" class="hero-item" [class.selected]="hero===selectedHero" (click)="onSelect(hero)">
+			<span class="hero-id">{{hero.id}}</span>
+			<span class="hero-name">{{hero.name}}</span>
+		</li>
+	</ul>
+	<!-- <div *ngIf="selectedHero">
+		<h2>{{selectedHero.name}} details!</h2>
+		<div>
+			<span>id: {{selectedHero.id}}</span>
+		</div>
+		<div>
+			<span>name:</span>
+			<input [(ngModel)]="selectedHero.name">
+		</div>
+	</div> -->
+</div>
+<div class="col-md-5">
+	<hero-detail [hero]="selectedHero"></hero-detail>
+</div>

@@ -1,0 +1,109 @@
+/* Rules for sizing the icon. */
+mat-icon.material-icons.md-36{ font-size: 36px;  }
+mat-icon.md-36{ font-size: 36px;  }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+mat-icon{
+	position: relative;
+	top: 5px;
+	/*padding-top: 10px;*/
+}
+mat-list h3{
+	border: 1px solid #eee;
+	margin-left: 15px;
+}
+
+mat-card{
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.card-title{
+	display: inline-block;
+}
+
+.line{
+	position: absolute;
+	bottom: 0px;
+	right: 50%;
+	width: 0%;
+	height: 2%;
+	background-color: #3f51b5;
+	transition: width 1s;
+
+	/*animation-name: expand;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;*/
+	/*animation-direction: reverse;*/
+}
+.line-reverse{
+	position:absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 0%;
+	height: 2%;
+	/*transform: rotate(180deg);*/
+	background-color: #3f51b5;
+	transition: width 1s;
+}
+
+mat-card:hover .line{
+	/*left: 0%;
+	width: 0%;
+	background-color: #3f51b5;
+	animation-name: expand;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;*/
+	/*width: 50%;*/
+}
+mat-card:hover .line-reverse{
+	/*width: 50%;*/
+}
+
+.selected .line, .selected .line-reverse{
+	width: 50%;
+}
+
+@keyframes expand{
+	0% { width: 30%; }
+	/*25% { width: 50%; }*/
+	/*50% { width: 75%; }*/
+	100% { width: 100%; }
+}
+
+.hero-item{
+	/*position: relative;*/
+	margin-bottom: 10px;
+	/*padding-top: 5px;*/
+	/*padding-bottom: 5px;*/
+	/*padding-left: 20px;*/
+	padding-right: 20px;
+	/*border-radius: 5px;*/
+	/*box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);*/
+	box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.75);
+
+}
+.selected .hero-id{
+	background-color: #3769ba;
+	color: #fff;
+}
+.hero-item:hover{
+	cursor: pointer;
+}
+.hero-item:hover .hero-id{
+	/*cursor: pointer;*/
+	background-color: #bad2f5;
+	/*box-shadow: 0px 1px 5px -1px #bad2f5;*/
+	/*bottom: 0.3em;*/
+}
+.hero-item .hero-id{
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	/*margin-top: 20px;*/
+	border-right: 1px solid #eee;
+}

@@ -1,0 +1,32 @@
+.hero-title{
+	display: inline-block;
+	margin-top: 35px;
+	padding: 7px;
+	background-color: #3769ba;
+	/*border-radius: 5px;*/
+	color: #fff;
+}
+.hero-details{
+	margin-top: 20px;
+	margin-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	min-width: 90%;
+	border-radius: 5px;
+	/*box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);*/
+	box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.75);
+}
+.hero-details h2{
+	/*display: inline-block;*/
+	border-bottom: 1px solid #3769ba;
+	margin-left: auto;
+	margin-top: 5px;
+	margin-right: auto;
+	/*text-decoration: ;*/
+}
+.hero-details input{
+	width: 90%;
+	height: 37px;
+}
